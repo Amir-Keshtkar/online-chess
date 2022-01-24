@@ -87,12 +87,21 @@ export default class Game extends Component {
         Blocks[i] = Blocks[this.state.sourceSelection];
         Blocks[this.state.sourceSelection] = null;
 
+        //pawn promotion
         if (Blocks[i] instanceof Pawn && (i < 8 || i > 55)) {
-          Blocks[i]=null;
-          const b=new Queen(this.state.player);
-          Blocks[i]=b;
-          //Blocks[i]=this.pawnPromotion( this.state.player)
+          Blocks[i]=this.pawnPromotion(Blocks, i, this.state.player)
         }
+
+        //alert for check
+         const opponent = this.state.player === 1 ? 2 : 1
+        if(this.isCheckForPlayer(Blocks, opponent)){
+          const KingPosition = this.getKingPosition(Blocks, opponent)
+          Blocks[KingPosition].style = { ...Blocks[KingPosition].style, backgroundColor: "RGB(230, 0, 0)" };
+        }else if(this.isCheckForPlayer(Blocks, this.state.player)){
+          const KingPosition = this.getKingPosition(Blocks, this.state.player)
+          Blocks[KingPosition].style = { ...Blocks[KingPosition].style, backgroundColor: "RGB(230, 0, 0)" };
+        }
+
 
         const isCheckMe = this.isCheckForPlayer(Blocks, this.state.player)
 
@@ -125,9 +134,12 @@ export default class Game extends Component {
     }
   }
 
-  pawnPromotion( player) {
+  pawnPromotion( Blocks, i, player) {
       console.log("end of the line")
       //const Blocks = Array(4).fill(null);
+      Blocks[i]=null;
+      const b=new Queen(this.state.player);
+      return b;
       const Block=new Queen(player)
       return { Block}
   }
