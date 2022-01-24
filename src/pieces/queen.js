@@ -1,21 +1,17 @@
 import Piece from './piece.js';
 import { isSameRow, isSameColumn, isSameDiagonal, isPathClean } from '../helpers'
+import blackQueen from "./img/bq.png";
+import whiteQueen from "./img/wq.png";
 
 export default class Queen extends Piece {
   constructor(player) {
-    super(player, (player === 1 ? "https://upload.wikimedia.org/wikipedia/commons/1/15/Chess_qlt45.svg" : "https://upload.wikimedia.org/wikipedia/commons/4/47/Chess_qdt45.svg"));
+    super(player, (player === 1 ? whiteQueen : blackQueen));
   }
 
   isMovePossible(src, dest, squares) {
     return isPathClean(this.getSrcToDestPath(src, dest), squares) && (isSameDiagonal(src, dest) || isSameRow(src, dest) || isSameColumn(src, dest));
   }
 
-  /**
-   * get path between src and dest (src and dest exclusive)
-   * @param  {num} src  
-   * @param  {num} dest 
-   * @return {[array]}      
-   */
   getSrcToDestPath(src, dest) {
     let path = [], pathStart, pathEnd, incrementBy;
     if (src > dest) {

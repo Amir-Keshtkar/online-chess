@@ -91,11 +91,11 @@ body {
   }
   
   .dark-square{
-  background-color: RGB(187,190,100);
+  background-color: RGB(255, 102, 0);
   }
   
   .light-square{
-	  background-color: RGB(234,240,206);
+	  background-color: RGB(255, 204, 153);
   }
   
   #player-turn-box{

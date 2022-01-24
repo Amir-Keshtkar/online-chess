@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{Component} from 'react';
 
 import './Style.css';
 import Board from './board.js';
@@ -6,7 +6,7 @@ import King from '../pieces/king'
 import FallenSoldierBlock from './fallen-soldier-block.js';
 import initialiseChessBoard from '../helpers/board-initialiser.js';
 
-export default class Game extends React.Component {
+export default class Game extends Component {
   constructor() {
     super();
     this.state = {
@@ -31,7 +31,7 @@ export default class Game extends React.Component {
         }
       }
       else {
-        squares[i].style = { ...squares[i].style, backgroundColor: "RGB(111,143,114)" }; // Emerald from http://omgchess.blogspot.com/2015/09/chess-board-color-schemes.html
+        squares[i].style = { ...squares[i].style, backgroundColor: "RGB(111,143,114)" }; 
         this.setState({
           status: "Choose destination for the selected piece",
           sourceSelection: i

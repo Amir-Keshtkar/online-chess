@@ -1,21 +1,17 @@
 import Piece from './piece.js';
 import { isSameRow, isSameColumn, isSameDiagonal, isPathClean } from '../helpers'
+import blackRook from "./img/br.png";
+import whiteRook from "./img/wr.png";
 
 export default class Rook extends Piece {
   constructor(player) {
-    super(player, (player === 1 ? "https://upload.wikimedia.org/wikipedia/commons/7/72/Chess_rlt45.svg" : "https://upload.wikimedia.org/wikipedia/commons/f/ff/Chess_rdt45.svg"));
+    super(player, (player === 1 ? whiteRook : blackRook));
   }
 
   isMovePossible(src, dest, squares) {
     return isPathClean(this.getSrcToDestPath(src, dest), squares) && (isSameColumn(src, dest) || isSameRow(src, dest));
   }
 
-  /**
-   * get path between src and dest (src and dest exclusive)
-   * @param  {num} src  
-   * @param  {num} dest 
-   * @return {[array]}      
-   */
   getSrcToDestPath(src, dest) {
     let path = [], pathStart, pathEnd, incrementBy;
     if (src > dest) {
