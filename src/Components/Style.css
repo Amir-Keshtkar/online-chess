@@ -2,18 +2,6 @@
 	margin:0;
 	padding:0;
 }
-.container{
-	min-height: 100vh;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background-color: darkolivegreen;
-}
-.board-container{
-	width: 600px;
-	height: 600px;
-	background-color: aqua;
-}
 .board{
 	width: 100%;
 	height: 100%;
@@ -30,12 +18,6 @@
 	margin: left;
     size: 40px;
     color: darkorange;
-}
-.Black-Block{
-	background: darkgray;
-}
-.White-Block{
-	background: whitesmoke;
 }
 body {
 	
@@ -57,7 +39,7 @@ body {
 	margin-bottom: 10px;
   }
   
-  .square {
+  .Block{
 	background: transparent;
 	border: 1px solid transparent;
 	float: left;
@@ -72,11 +54,11 @@ body {
 	width: 100px;
   }
   
-  .square:focus {
+  .Block :focus {
 	outline: none;
   }
   
-  .kbd-navigation .square:focus {
+  .kbd-navigation .Block :focus {
 	background: #ddd;
   }
   
@@ -84,17 +66,16 @@ body {
 	margin-left: 20px;
   }
   
-  
   .icons-attribution, .game-status, .fallen-soldier-block{
 	margin-top: 20px;
 	min-height: 50px;
   }
   
-  .dark-square{
+  .dark-Block {
   background-color: RGB(255, 102, 0);
   }
   
-  .light-square{
+  .light-Block{
 	  background-color: RGB(255, 204, 153);
   }
   

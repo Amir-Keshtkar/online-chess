@@ -6,32 +6,32 @@ import Queen from '../pieces/queen.js';
 import Rook from '../pieces/rook.js';
 
 export default function initialiseChessBoard() {
-  const squares = Array(64).fill(null);
+  const Blocks = Array(64).fill(null);
 
   for (let i = 8; i < 16; i++) {
-    squares[i] = new Pawn(2);
-    squares[i + 40] = new Pawn(1);
+    Blocks[i] = new Pawn(2);
+    Blocks[i + 40] = new Pawn(1);
   }
-  squares[0] = new Rook(2);
-  squares[7] = new Rook(2);
-  squares[56] = new Rook(1);
-  squares[63] = new Rook(1);
+  Blocks[0] = new Rook(2);
+  Blocks[7] = new Rook(2);
+  Blocks[56] = new Rook(1);
+  Blocks[63] = new Rook(1);
 
-  squares[1] = new Knight(2);
-  squares[6] = new Knight(2);
-  squares[57] = new Knight(1);
-  squares[62] = new Knight(1);
+  Blocks[1] = new Knight(2);
+  Blocks[6] = new Knight(2);
+  Blocks[57] = new Knight(1);
+  Blocks[62] = new Knight(1);
 
-  squares[2] = new Bishop(2);
-  squares[5] = new Bishop(2);
-  squares[58] = new Bishop(1);
-  squares[61] = new Bishop(1);
+  Blocks[2] = new Bishop(2);
+  Blocks[5] = new Bishop(2);
+  Blocks[58] = new Bishop(1);
+  Blocks[61] = new Bishop(1);
 
-  squares[3] = new Queen(2);
-  squares[4] = new King(2);
+  Blocks[3] = new Queen(2);
+  Blocks[4] = new King(2);
 
-  squares[59] = new Queen(1);
-  squares[60] = new King(1);
+  Blocks[59] = new Queen(1);
+  Blocks[60] = new King(1);
 
-  return squares;
+  return Blocks;
 }

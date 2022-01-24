@@ -1,10 +1,10 @@
 import React from 'react';
 
 
-export default function Square(props) {
+export default function Block(props) {
 
   return (
-    <button className={"square " + props.shade}
+    <button className={"Block " + props.shade}
       onClick={props.onClick}
       style={props.style}
       key={props.keyVal}

@@ -1,16 +1,16 @@
-import React from 'react';
+import React ,{Component}from 'react';
 
 import './Style.css';
-import Square from './Square.js';
+import Block from './Block.js';
 
-export default class Board extends React.Component {
+export default class Board extends Component {
 
-  renderSquare(i, squareShade) {
-    return <Square
+  renderBlock(i, BlockShade) {
+    return <Block
       key={i}
       keyVal={i}
-      style={this.props.squares[i] ? this.props.squares[i].style : null}
-      shade={squareShade}
+      style={this.props.Blocks[i] ? this.props.Blocks[i].style : null}
+      shade={BlockShade}
       onClick={() => this.props.onClick(i)}
     />
   }
@@ -18,12 +18,12 @@ export default class Board extends React.Component {
   render() {
     const board = [];
     for (let i = 0; i < 8; i++) {
-      const squareRows = [];
+      const BlockRows = [];
       for (let j = 0; j < 8; j++) {
-        const squareShade = (isEven(i) && isEven(j)) || (!isEven(i) && !isEven(j)) ? "light-square" : "dark-square";
-        squareRows.push(this.renderSquare((i * 8) + j, squareShade));
+        const BlockShade = (isEven(i) && isEven(j)) || (!isEven(i) && !isEven(j)) ? "light-Block" : "dark-Block";
+        BlockRows.push(this.renderBlock((i * 8) + j, BlockShade));
       }
-      board.push(<div className="board-row" key={i}>{squareRows}</div>)
+      board.push(<div className="board-row" key={i}>{BlockRows}</div>)
     }
 
     return (

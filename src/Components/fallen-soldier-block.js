@@ -1,16 +1,15 @@
-import React from 'react';
-
+import React ,{Component}from 'react';
 import './Style.css';
-import Square from './Square.js';
+import Blocks from './Block.js';
 
-export default class FallenSoldierBlock extends React.Component {
+export default class FallenSoldierBlock extends Component {
 
-  renderSquare(square, i, squareShade) {
-    return <Square
+  renderBlock(Block, i) {
+    return <Blocks
       key={i}
       keyVal={i}
-      piece={square}
-      style={square.style}
+      piece={Block}
+      style={Block.style}
     />
   }
 
@@ -18,10 +17,10 @@ export default class FallenSoldierBlock extends React.Component {
     return (
       <div>
         <div className="board-row">{this.props.whiteFallenSoldiers.map((ws, index) =>
-          this.renderSquare(ws, index)
+          this.renderBlock(ws, index)
         )}</div>
         <div className="board-row">{this.props.blackFallenSoldiers.map((bs, index) =>
-          this.renderSquare(bs, index)
+          this.renderBlock(bs, index)
         )}</div>
       </div>
     );
