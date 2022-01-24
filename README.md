@@ -1,3 +1,7 @@
+# Online-Chess
+Online chess with ability of chatting with your friend
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
