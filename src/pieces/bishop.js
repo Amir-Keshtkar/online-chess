@@ -10,12 +10,6 @@ export default class Bishop extends Piece {
     return isPathClean(this.getSrcToDestPath(src, dest), squares) && isSameDiagonal(src, dest)
   }
 
-  /**
-   * get path between src and dest (src and dest exclusive)
-   * @param  {num} src  
-   * @param  {num} dest 
-   * @return {[array]}      
-   */
   getSrcToDestPath(src, dest) {
     let path = [], pathStart, pathEnd, incrementBy;
     if (src > dest) {

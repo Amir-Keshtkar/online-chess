@@ -17,10 +17,6 @@ export default class Knight extends Piece {
       (src + 17 === dest && !isSameRow(src, dest)))
   }
 
-  /**
-   * always returns empty array because of jumping
-   * @return {[]}
-   */
   getSrcToDestPath() {
     return [];
   }

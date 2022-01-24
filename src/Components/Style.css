@@ -38,9 +38,9 @@
 	background: whitesmoke;
 }
 body {
-	font: 14px "Century Gothic", Futura, sans-serif;
-	margin: 20px;
-	background-color: #ECECEA;
+	
+	background-image:url("texture.jfif");
+	background-repeat:repeat;
   }
   
   ol, ul {
@@ -64,12 +64,12 @@ body {
 	font-size: 24px;
 	font-weight: bold;
 	line-height: 34px;
-	height: 48px;
 	margin-right: -1px;
 	margin-top: -1px;
 	padding: 0;
 	text-align: center;
-	width: 48px;
+	height: 100px;
+	width: 100px;
   }
   
   .square:focus {
@@ -90,9 +90,6 @@ body {
 	min-height: 50px;
   }
   
-  
-  
-  /*Board color scheme Wheat from http://omgchess.blogspot.com/2015/09/chess-board-color-schemes.html*/
   .dark-square{
   background-color: RGB(187,190,100);
   }
