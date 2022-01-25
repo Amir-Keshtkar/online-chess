@@ -41,18 +41,17 @@ export default class Game extends Component {
       else {
         Blocks[i].style = { ...Blocks[i].style, backgroundColor: "RGB(102, 204, 255)" };
         /*
-        let srcToDestPath = Blocks[this.state.sourceSelection].getSrcToDestPath(this.state.sourceSelection, i);
-        let i=0;
-        for(; i<srcToDestPath.length;i++){
+        const srcToDestPath= Blocks[i].getSrcToDestPath(this.state.sourceSelection, i);
+        for(let i=0; i<srcToDestPath.length;i++){
           srcToDestPath[i].style={backgroundColor: "RGB(102, 204, 255)" }
-        }دح
-         console.log(srcToDestPath)
+        }
+        console.log(this.state.sourceSelection)
         */
-
         this.setState({
           status: "Choose destination for the selected piece",
           sourceSelection: i
         })
+        
       }
       return
     }
