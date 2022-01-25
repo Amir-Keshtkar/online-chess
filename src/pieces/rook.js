@@ -33,7 +33,7 @@ export default class Rook extends Piece {
     }
 
     for (let i = pathStart; i < pathEnd; i += incrementBy) {
-      console.log(i)
+      //console.log(i)
       path.push(i);
     }
     return path;

@@ -7,7 +7,7 @@ import Rook from '../pieces/rook.js';
 
 export default function initialiseChessBoard() {
   const Blocks = Array(64).fill(null);
-
+  
   for (let i = 8; i < 16; i++) {
     Blocks[i] = new Pawn(2);
     Blocks[i + 40] = new Pawn(1);

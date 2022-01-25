@@ -40,6 +40,6 @@ export default class Pawn extends Piece {
     else if (dest === src + 16) {
       return [src + 8];
     }
-    return [];
+    return -1;
   }
 }

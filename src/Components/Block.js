@@ -8,6 +8,7 @@ export default function Block(props) {
       onClick={props.onClick}
       style={props.style}
       key={props.keyVal}
+      player={props.player}
     >
     </button>
   );

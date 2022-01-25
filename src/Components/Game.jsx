@@ -54,7 +54,7 @@ export default class Game extends Component {
     //on second click we should change block's color back to normal
     Blocks[this.state.sourceSelection].style = { ...Blocks[this.state.sourceSelection].style, backgroundColor: "" };
 
-    //if player choosed an unvalid block for his Pieac
+    //if player choosed an unvalid block or his own pieac for destination 
     if (Blocks[i] && Blocks[i].player === this.state.player) {
       this.setState({
         status: "Wrong selection. Choose valid source and destination again.",
@@ -65,6 +65,7 @@ export default class Game extends Component {
       const whiteFallenSoldiers = [];
       const blackFallenSoldiers = [];
       const isDestEnemyOccupied = Boolean(Blocks[i]);
+      console.log("_______________________________________________clicked on")
       const isMovePossible = Blocks[this.state.sourceSelection].isMovePossible(this.state.sourceSelection, i, isDestEnemyOccupied,Blocks);
 
       if (isMovePossible) {
