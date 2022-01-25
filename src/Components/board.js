@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 
 import './Style.css';
-import Block from './Block.js';
+import Block from './Square.js';
 
 //<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
 

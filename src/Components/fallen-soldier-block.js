@@ -1,7 +1,7 @@
 import React from 'react';
 
 import './Style.css';
-import Square from './Block.js';
+import Blocks from './Square.js';
 
 export default class FallenSoldierBlock extends React.Component {
 
