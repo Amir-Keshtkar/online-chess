@@ -141,7 +141,7 @@ export default class Game extends Component {
     return Blocks.reduce((acc, curr, i) =>
       //King is only one, if we had found it, returned his position
       acc ||
-      //current squre mustn't be a null
+      //current Block mustn't be a null
       ((curr &&
         (curr.getPlayer() === player))
         && (curr instanceof King)

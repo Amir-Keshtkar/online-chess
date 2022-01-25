@@ -8,8 +8,9 @@ export default class Rook extends Piece {
     super(player, (player === 1 ? whiteRook : blackRook));
   }
 
-  isMovePossible(src, dest, squares) {
-    return isPathClean(this.getSrcToDestPath(src, dest), squares) && (isSameColumn(src, dest) || isSameRow(src, dest));
+  isMovePossible(src, dest, Blocks) {
+   
+    return isPathClean(this.getSrcToDestPath(src, dest), Blocks) && (isSameColumn(src, dest) || isSameRow(src, dest));
   }
 
   getSrcToDestPath(src, dest) {
@@ -32,6 +33,7 @@ export default class Rook extends Piece {
     }
 
     for (let i = pathStart; i < pathEnd; i += incrementBy) {
+      console.log(i)
       path.push(i);
     }
     return path;
