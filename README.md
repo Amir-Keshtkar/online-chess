@@ -72,3 +72,42 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+# Backend
+Refers to the server side work like authentications, data fetching etc.
+
+## Node js
+
+To start off create an empty directory and move into it:
+```bash
+mkdir fileName && cd $_
+```
+Then initialize the project:
+```bash
+npm init -y
+```
+We also need to install Socket.io, which is the main dependency of our project, and ExpressJS. Express will help us to build the server:
+```bash
+npm i express socket.io
+```
+## nodemon
+nodemon is a tool that helps develop node.js based applications by automatically restarting the node application when file changes in the directory are detected.
+
+nodemon does not require any additional changes to your code or method of development. nodemon is a replacement wrapper for node. To use nodemon, replace the word node on the command line when executing your script.
+```bash
+npm install -g nodemon # or using yarn: yarn global add nodemon
+```
+## install the Socket.IO client
+```bash
+npm i socket.io-client
+```
+# Socket.IO, React and Node.js: implementing the React client
+now save and close the file, open a terminal, go into the server folder and start the Socket.io server:
+```bash
+cd NodeFolder && node/nodemon app.js
+```
+In another terminal go into the client folder and start the React project:
+```bash
+cd ReactFolder && yarn/npm start
+```

@@ -1,9 +1,11 @@
-import React ,{Component}from 'react';
+import React, { Fragment } from 'react';
 
 import './Style.css';
 import Block from './Block.js';
 
-export default class Board extends Component {
+//<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+
+export default class Board extends React.Component {
 
   renderBlock(i, BlockShade) {
     return <Block
@@ -27,9 +29,29 @@ export default class Board extends Component {
     }
 
     return (
-      <div>
-        {board}
-      </div>
+      <Fragment>
+        <div>
+          {board}
+        </div>
+          <div class="main-container">
+          <h2 class="app-title">The Messenger</h2>
+          <div class="room-window">
+            <div class="room-text" id="room"></div>
+            <div class="room-feedback" id="feedback">status</div>
+          </div>
+          <input class="text-user" type="text" id="user" placeholder="username" />
+          <input
+            class="text-message"
+            type="text"
+            id="message"
+            placeholder="message"
+          />
+          <button class="send-btn" id="send">Send</button>
+        </div>
+    
+        <script src="chat.js"></script>
+      </Fragment>
+
     );
   }
 }
