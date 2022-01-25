@@ -1,5 +1,5 @@
 import Piece from './piece.js';
-import { isSameDiagonal } from '../helpers'
+import { isPathClean, isSameDiagonal } from '../helpers'
 import blackPawn from "./img/bp.png";
 import whitePawn from "./img/wp.png";
 
@@ -12,10 +12,10 @@ export default class Pawn extends Piece {
     }
   }
 
-  isMovePossible(src, dest, isDestEnemyOccupied) {
+  isMovePossible(src, dest, isDestEnemyOccupied,Blocks) {
 
     if (this.player === 1) {
-      if ((dest === src - 8 && !isDestEnemyOccupied) || (dest === src - 16 && !isDestEnemyOccupied && this.initialPositions[1].indexOf(src) !== -1)) {
+      if ((dest === src - 8 && !isDestEnemyOccupied) || (dest === src - 16 && !isDestEnemyOccupied && isPathClean(this.getSrcToDestPath(src, dest),Blocks) && this.initialPositions[1].indexOf(src) !== -1 )) {
         return true;
       }
       else if (isDestEnemyOccupied && isSameDiagonal(src, dest) && (dest === src - 9 || dest === src - 7)) {
@@ -23,7 +23,7 @@ export default class Pawn extends Piece {
       }
     }
     else if (this.player === 2) {
-      if ((dest === src + 8 && !isDestEnemyOccupied) || (dest === src + 16 && !isDestEnemyOccupied && this.initialPositions[2].indexOf(src) !== -1)) {
+      if ((dest === src + 8 && !isDestEnemyOccupied) || (dest === src + 16 && !isDestEnemyOccupied && isPathClean(this.getSrcToDestPath(src, dest),Blocks)&& this.initialPositions[2].indexOf(src) !== -1)) {
         return true;
       }
       else if (isDestEnemyOccupied && isSameDiagonal(src, dest) && (dest === src + 9 || dest === src + 7)) {

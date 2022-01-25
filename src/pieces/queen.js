@@ -8,8 +8,8 @@ export default class Queen extends Piece {
     super(player, (player === 1 ? whiteQueen : blackQueen));
   }
 
-  isMovePossible(src, dest, squares) {
-    return isPathClean(this.getSrcToDestPath(src, dest), squares) && (isSameDiagonal(src, dest) || isSameRow(src, dest) || isSameColumn(src, dest));
+  isMovePossible(src, dest, Blocks) {
+    return isPathClean(this.getSrcToDestPath(src, dest), Blocks) && (isSameDiagonal(src, dest) || isSameRow(src, dest) || isSameColumn(src, dest));
   }
 
   getSrcToDestPath(src, dest) {

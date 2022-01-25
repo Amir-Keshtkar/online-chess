@@ -8,8 +8,8 @@ export default class Bishop extends Piece {
     super(player, (player === 1 ? whiteBishop : blackBishop));
   }
 
-  isMovePossible(src, dest, squares) {
-    return isPathClean(this.getSrcToDestPath(src, dest), squares) && isSameDiagonal(src, dest)
+  isMovePossible(src, dest, Blocks) {
+    return isPathClean(this.getSrcToDestPath(src, dest), Blocks) && isSameDiagonal(src, dest)
   }
 
   getSrcToDestPath(src, dest) {

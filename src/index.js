@@ -1,11 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import {DndProvider} from 'react-dnd';
+/*import {DndProvider} from 'react-dnd';
 import {HTML5Backend} from 'react-dnd-html5-backend';
-import * as serviceWorker from './serviceWorker';
-
+import * as serviceWorker from './serviceWorker';*/
 import Game from './Components/Game.jsx'
-
 
 ReactDOM.render(
   <Game />,

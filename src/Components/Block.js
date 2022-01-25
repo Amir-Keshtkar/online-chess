@@ -9,7 +9,6 @@ export default function Block(props) {
       style={props.style}
       key={props.keyVal}
     >
-
     </button>
   );
 

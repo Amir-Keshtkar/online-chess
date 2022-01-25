@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Style.css';
-import Board from './board.js';
+import Board from './board.jsx';
 import King from '../pieces/king'
 import FallenSoldierBlock from './fallen-soldier-block.js';
 import initialiseChessBoard from '../helpers/board-initialiser.js';
@@ -23,11 +23,6 @@ export default class Game extends Component {
       turn: 'white'
     }
   }
-  ShowPass(id) {
-    const Blocks = [...this.state.Blocks];
-
-  }
-
 
   handleClick(i) {
     const Blocks = [...this.state.Blocks];
@@ -70,7 +65,7 @@ export default class Game extends Component {
       const whiteFallenSoldiers = [];
       const blackFallenSoldiers = [];
       const isDestEnemyOccupied = Boolean(Blocks[i]);
-      const isMovePossible = Blocks[this.state.sourceSelection].isMovePossible(this.state.sourceSelection, i, isDestEnemyOccupied);
+      const isMovePossible = Blocks[this.state.sourceSelection].isMovePossible(this.state.sourceSelection, i, isDestEnemyOccupied,Blocks);
 
       if (isMovePossible) {
         if (Blocks[i] !== null) {
@@ -100,7 +95,6 @@ export default class Game extends Component {
           const KingPosition = this.getKingPosition(Blocks, this.state.player)
           Blocks[KingPosition].style = { ...Blocks[KingPosition].style, backgroundColor: "RGB(230, 0, 0)" };
         }
-
 
         const isCheckMe = this.isCheckForPlayer(Blocks, this.state.player)
 
@@ -178,26 +172,18 @@ export default class Game extends Component {
           <div className="game-info">
             <h3>Turn</h3>
             <div id="player-turn-box" style={{ backgroundColor: this.state.turn }}>
-
             </div>
             <div className="game-status">{this.state.status}</div>
-
             <div className="fallen-soldier-block">
-
               {<FallenSoldierBlock
                 whiteFallenSoldiers={this.state.whiteFallenSoldiers}
                 blackFallenSoldiers={this.state.blackFallenSoldiers}
               />
               }
             </div>
-
           </div>
         </div>
-
       </div>
-
-
     );
   }
 }
-

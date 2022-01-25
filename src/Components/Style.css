@@ -67,6 +67,8 @@ body {
   }
   
   .icons-attribution, .game-status, .fallen-soldier-block{
+	font-size: large;
+	color:white;
 	margin-top: 20px;
 	min-height: 50px;
   }
