@@ -72,3 +72,22 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+# Backend
+Refers to the server side work like authentications, data fetching etc.
+
+## Node js
+
+To start off create an empty directory and move into it:
+```bash
+mkdir fileName && cd $_
+```
+Then initialize the project:
+```bash
+npm init -y
+```
+We also need to install Socket.io, which is the main dependency of our project, and ExpressJS. Express will help us to build the server:
+```bash
+npm i express socket.io
+```
