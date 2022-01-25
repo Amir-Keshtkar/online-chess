@@ -1,7 +1,7 @@
 import React ,{Component}from 'react';
 
 import './Style.css';
-import Block from './Block.js';
+import Block from './Square.js';
 
 export default class Board extends Component {
 
