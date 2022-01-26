@@ -9,20 +9,11 @@
 	flex-wrap: wrap;
 	background-color: red;
 }
-.Tile{
-	width: 12.5%;
-	height: 12.5%;
-}
-#alert{
-	font-size: 2em;
-	margin: left;
-    size: 40px;
-    color: darkorange;
-}
 body {
-	
 	background-image:url("texture.jfif");
 	background-repeat:repeat;
+  /*background: no-repeat linear-gradient(180deg, #2cb5e8 0%, #ffffff 100%);*/
+  font-family: "Comic Sans MS", cursive, sans-serif;
   }
   
   ol, ul {
@@ -90,11 +81,6 @@ body {
   
   h3{
 	margin-bottom: 5px;
-  }
-
-  body {
-    background: no-repeat linear-gradient(180deg, #2cb5e8 0%, #ffffff 100%);
-    font-family: "Comic Sans MS", cursive, sans-serif;
   }
   
   .main-container {

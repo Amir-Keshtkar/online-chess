@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Style.css';
-import Board from './board.js';
+import Board from './board.jsx';
 import King from '../pieces/king'
 import FallenSoldierBlock from './fallen-soldier-block.js';
 import initialiseChessBoard from '../helpers/board-initialiser.js';

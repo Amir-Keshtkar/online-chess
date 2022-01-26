@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-=======
 import React, { useState, useEffect } from "react";
 
->>>>>>> connection
 var socket = io.connect("http://localhost:3000");
 
 var room = document.getElementById("room");
@@ -11,14 +8,11 @@ var user = document.getElementById("user");
 var message = document.getElementById("message");
 var send = document.getElementById("send");
 
-<<<<<<< HEAD
-=======
 /*const [response, setResponse] = useState("");
 useEffect(() => {
 
 }, []);*/
 
->>>>>>> connection
 send.addEventListener("click", function () {
   if (!user.value) {
     alert("Please enter a username first.");
